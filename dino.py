@@ -9,21 +9,22 @@ def hit(key):
     pyautogui.keyDown(key)
     return
 
-"""def isCollide(data):
+def isCollide(data):
     # Draw the rectangle for birds
-    for i in range(300, 415):
-        for j in range(410, 563):
-            if data[i, j] < 100:
+    """for i in range(230, 250):
+        for j in range(300, 380):
+            if data[i, j] > 100:
                 hit("down")
                 return
-
-    for i in range(300, 415):
-        for j in range(563, 650):
-            if data[i, j] < 100:
+    """
+    for i in range(300, 340):
+        for j in range(380, 455):
+            if data[i, j] > 100:
                 hit("up")
                 return
+    
     return
-"""
+
 if __name__ == "__main__":
     print("Hey.. Dino game about to start in 3 seconds")
     time.sleep(2)
@@ -32,23 +33,25 @@ if __name__ == "__main__":
     while True:
         image = ImageGrab.grab().convert('L')  
         data = image.load()
-        image.show()
-        #isCollide(data)
+        #image.show()
+        isCollide(data)
             
         # print(asarray(image))
         
-        # Draw the rectangle for cactus
-        for i in range(175, 200):
-            for j in range(380, 460):
+        """# Draw the rectangle for cactus
+        for i in range(250, 260):
+            for j in range(380, 455):
                 data[i, j] = 0
+                
         
         # Draw the rectangle for birds
-        for i in range(200, 230):
+        for i in range(230, 240):
                 
             for j in range(300, 360):
-                data[i, j] = 171
+                data[i, j] = 120
 
         image.show()
         break
+        """
       
 
