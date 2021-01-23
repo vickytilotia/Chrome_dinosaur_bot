@@ -16,12 +16,15 @@ def isCollide(data):
             if data[i, j] > 100:
                 hit("down")
                 return
+    
     """
-    for i in range(300, 340):
+    # Draw rectangle for cactus
+    for i in range(400, 430):
         for j in range(380, 455):
             if data[i, j] > 100:
-                hit("up")
-                return
+                if data[i,j] < 220:
+                    hit("up")
+                    return
     
     return
 
@@ -48,7 +51,7 @@ if __name__ == "__main__":
         for i in range(230, 240):
                 
             for j in range(300, 360):
-                data[i, j] = 120
+                data[i, j] = 220
 
         image.show()
         break
